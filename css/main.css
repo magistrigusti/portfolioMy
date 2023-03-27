@@ -176,9 +176,36 @@ html,body {
 
 .btn-outline:active {
   position: relative;
+  top: 2px;
+}
+
+/* Btn Slider */
+
+.controls {
+  margin: 0 auto;
+  padding: 15px 0;
+  text-align: center;
+}
+
+.btn-slider {
+  margin: 5px;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 0.2rem 1rem;
+  cursor: pointer;
+  border: 2px solid var(--dark);
+  border-radius: 5px;
+  transition: opacity 0.2s ease-in;
+}
+
+.btn-slider:active {
+  position: relative;
   top: 1px;
 }
 
+.btn-slider:hover {
+  opacity: 0.8;
+}
 
 
 /* General */
@@ -259,6 +286,12 @@ html,body {
   line-height: 1.3;
 }
 
+/* Slider */
+
+.hidden {
+  display: none;
+}
+
 /* Content-list */
 
 .content-list {
@@ -322,6 +355,10 @@ html,body {
 
   .header__title strong {
     font-size: 40px; 
+  }
+
+  .section {
+    padding: 40px 0;
   }
 }
 

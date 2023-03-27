@@ -35,7 +35,18 @@
     <div class="container">
       <div class="project-details">
         <h1 class="title-1">Active Box</h1>
-        <img class="project-details__cover" src="./img/projects/activebox.png" alt="">
+        
+        <div class="slider" id="slider">
+          <img class="project-details__cover" src="./img/projects/activebox/activebox-1.png" alt="slider 1">
+          <img class="project-details__cover" src="./img/projects/activebox/activebox-2.png" alt="slider 2">
+          <img class="project-details__cover" src="./img/projects/activebox/activebox-3.png" alt="slider 3">
+          <img class="project-details__cover" src="./img/projects/activebox/activebox-4.png" alt="slider 4">
+        </div>
+
+        <div class="controls">
+          <button class="btn-slider" id="btnPrev">Back</button>
+          <button class="btn-slider" id="btnNext">Forward</button>
+        </div>
 
         <div class="project-details__desc">
           <p>Skills: HTML, CSS, JS.</p>
@@ -46,6 +57,7 @@
           gitHub repo
         </a>
       </div>
+
     </div>
   </main>
 
@@ -86,5 +98,7 @@
       </div>
     </div>
   </footer>
+
+  <script src="./js/slider.js"></script>
 </body>
 </html>
