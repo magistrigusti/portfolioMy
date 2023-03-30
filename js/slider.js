@@ -13,7 +13,7 @@ sliderItems.forEach(function (slide, index) {
     slide.classList.add('hidden');
     slide.removeAttribute('data-active');
 
-    let nextSlideIndex = index + 1 === sliderItems.length ? 0 : index + 1;
+    const nextSlideIndex = index + 1 === sliderItems.length ? 0 : index + 1;
 
     const nextSlide = slider.querySelector(`[data-index="${nextSlideIndex}"]`);
     nextSlide.classList.remove('hidden');
@@ -22,5 +22,14 @@ sliderItems.forEach(function (slide, index) {
 });
 
 btnNext.onclick = function () {
-  console.log('Next Slide');
+  const currentSlide = slider.querySelector('[data-active]');
+  const currentSlideIndex = +currentSlide.dataset.index;
+  
+  currentSlide.classList.add('hidden');
+  currentSlide.removeAttribute('data-active');
+
+  const nextSlideIndex = currentSlideIndex + 1 === sliderItems.length ? 0 : currentSlideIndex + 1;
+  const nextSlide = slider.querySelector(`[data-index="${nextSlideIndex}"]`);
+  nextSlide.classList.remove('hidden');
+  nextSlide.setAttribute('data-active', '');
 }
