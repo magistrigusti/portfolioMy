@@ -9,35 +9,30 @@ sliderItems.forEach(function (slide, index) {
   sliderItems[0].setAttribute('data-active', '');
 
   slide.addEventListener('click', function() {
-    slide.classList.add('hidden');
-    slide.removeAttribute('data-active');
-
-    const nextSlideIndex = index + 1 === sliderItems.length ? 0 : index + 1;
-    const nextSlide = slider.querySelector(`[data-index="${nextSlideIndex}"]`);
-    nextSlide.classList.remove('hidden');
-    nextSlide.setAttribute('data-active', '');
+    showNextSlide('next');
   });
 });
 
 btnNext.onclick = function() {
-  const currentSlide = slider.querySelector('[data-active]');
-  const currentSlideIndex = +currentSlide.dataset.index;
-  currentSlide.classList.add('hidden');
-  currentSlide.removeAttribute('data-active');
-
-  const nextSlideIndex = currentSlideIndex + 1 === sliderItems.length ? 0 : currentSlideIndex + 1;
-  const nextSlide = slider.querySelector(`[data-index="${nextSlideIndex}"]`);
-  nextSlide.classList.remove('hidden');
-  nextSlide.setAttribute('data-active', '');
+  showNextSlide('next');
 }
 
 btnPrev.onclick = function() {
+  showNextSlide('prev');
+}
+
+function showNextSlide(direction) {
   const currentSlide = slider.querySelector('[data-active]');
   const currentSlideIndex = +currentSlide.dataset.index;
   currentSlide.classList.add('hidden');
   currentSlide.removeAttribute('data-active');
 
-  const nextSlideIndex = currentSlideIndex === 0 ? sliderItems.length - 1 : currentSlideIndex - 1;
+  if (direction === 'next') {
+    nextSlideIndex = currentSlideIndex + 1 === sliderItems.length ? 0 : currentSlideIndex + 1;
+  } else if (direction === 'prev') {
+    nextSlideIndex = currentSlideIndex === 0 ? sliderItems.length - 1 : currentSlideIndex - 1;
+  }
+
   const nextSlide = slider.querySelector(`[data-index="${nextSlideIndex}"]`);
   nextSlide.classList.remove('hidden');
   nextSlide.setAttribute('data-active', '');
