@@ -45,7 +45,7 @@ html,body {
 
 .nav-row {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   column-gap: 30px;
   row-gap: 20px;
@@ -53,6 +53,7 @@ html,body {
 }
 
 .logo {
+  margin-right: auto;
   font-size: 24px;
   font-family: 'Poppins', sans-serif;
   color: var(--text);
@@ -210,10 +211,12 @@ html,body {
 /* Dark mode */
 
 .dark-mode-btn {
+  order: 9;
+  
   position: relative;
-
   display: flex;
   justify-content: space-between;
+
   width: 51px;
   height: 26px;
   padding: 5px;
