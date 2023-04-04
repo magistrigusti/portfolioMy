@@ -12,15 +12,30 @@
   --dark-border: var(--black-grey);
   --text: var(--white);
   --accent: var(--purple);
+
+  /* Light mode */
+
+  --page-bg: var(--white);
+  --text-color: var(--black);
+}
+
+.dark {
+  --page-bg: #252526;
+  --text-color: var(--white);
+  --accent: orange;
+  ;
 }
 
 html,body {
-  font-family: "DM Sans", sans-serif;
-  letter-spacing: -0.5px;
-  color: var(--dark);
-  height: 100%;
   display: flex;
   flex-direction: column;
+
+  font-family: "DM Sans", sans-serif;
+  letter-spacing: -0.5px;
+  height: 100%;
+
+  color: var(--text-color);
+  background-color: var(--page-bg)
 }
 
 /* Geteral */
@@ -212,7 +227,7 @@ html,body {
 
 .dark-mode-btn {
   order: 9;
-  
+
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -398,8 +413,30 @@ html,body {
     font-size: 40px; 
   }
 
+  /* Nav */
+
+  .nav-row {
+    justify-content: space-between;
+  }
+
+  .dark-mode-btn {
+    order: 0;
+  }
+
+  /* General */
+
   .section {
     padding: 40px 0;
+  }
+
+  .title-1 {
+    margin-bottom: 30px;
+    font-size: 40px;
+  }
+
+  .title-2 {
+    margin-bottom: 10px;
+    font-size: 30px;
   }
 }
 
