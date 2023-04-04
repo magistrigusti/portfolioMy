@@ -182,8 +182,10 @@ html,body {
   align-items: 10px;
 
   height: 48px;
-  border: 1px solid var(--dark);
+  border: 1px solid var(--black);
   border-radius: 5px;
+  color: var(--black);
+  background-color:var(--white);
   padding: 12px 20px;
 
   transition: opacity 0.2s ease-in;
