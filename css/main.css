@@ -112,6 +112,11 @@ html,body {
   min-height: 695px;
   background-color: var(--dark);
 
+  background-image: url('../../img/header-bg.png');
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center center;
+
   display: flex;
   justify-content: center;
   align-items: center;
