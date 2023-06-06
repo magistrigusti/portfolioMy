@@ -1,6 +1,6 @@
 const btnDarkMode = document.querySelector('.dark-mode-btn');
 
-if (window.matchMedia && windows.matchMedia('(prefers-color-scheme: dark)').matches) {
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
   btnDarkMode.classList.add('dark-mode-btn--active');
   document.body.classList.add('dark');
 }
